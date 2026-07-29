@@ -1,0 +1,48 @@
+@layer site {
+  body > header,
+  body > nav,
+  body > footer {
+    padding: var(--space-2) var(--space-3);
+    background: var(--panel);
+  }
+
+  body > header {
+    border-block-end: var(--border);
+  }
+
+  body > nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  body > footer {
+    border-block-start: var(--border);
+  }
+
+  .site-logo {
+    width: 4rem;
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+  .fresh-transition {
+    view-transition-name: fresh-cheese;
+  }
+
+  .soft-transition {
+    view-transition-name: soft-cheese;
+  }
+
+  .blue-transition {
+    view-transition-name: blue-cheese;
+  }
+
+  .hard-transition {
+    view-transition-name: hard-cheese;
+  }
+}

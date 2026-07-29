@@ -1,0 +1,33 @@
+@layer layout {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  body > main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-3);
+  }
+
+  .error-card {
+    max-width: 28rem;
+    padding: var(--space-3);
+    border: var(--border);
+    border-block-start: var(--rule);
+    background: var(--panel);
+    text-align: center;
+  }
+
+  .error-card img {
+    display: block;
+    max-width: 12rem;
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+    margin-block-end: var(--space-2);
+  }
+}

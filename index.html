@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | The CSE Cheese Society</title>
+  <meta
+    name="description"
+    content="Welcome to The CSE Cheese Society."
+  >
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+  <header>
+    <img
+      class="site-logo"
+      src="images/logo.svg"
+      alt="The CSE Cheese Society logo"
+    >
+    <h1>The CSE Cheese Society</h1>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="guide/index.html">Cheese Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Welcome to The CSE Cheese Society</h2>
+
+    <p>
+      We are a community of students, staff, and cheese enthusiasts who
+      gather to taste, learn about, and discuss cheeses from around the
+      world. Whether you are an experienced cheese connoisseur or simply
+      cheese-curious, you are welcome here.
+    </p>
+
+    <p>
+      Explore our cheese guide, learn more about the Society, or join us
+      at an upcoming tasting.
+    </p>
+
+    <button
+      type="button"
+      commandfor="cheese-fact"
+      command="toggle-popover"
+    >
+      Cheese Fact
+    </button>
+
+    <section id="cheese-fact" popover>
+      <h2>Cheese Fact</h2>
+      <p>
+        Cheese is one of the world’s oldest prepared foods, with evidence
+        of cheesemaking dating back thousands of years.
+      </p>
+    </section>
+  </main>
+
+  <aside>
+    <h2>Cheese of the Month</h2>
+    <img
+      src="images/cheese-blue.svg"
+      alt="Illustration of blue cheese"
+    >
+    <p>
+      This month, we are celebrating blue cheese—bold, distinctive,
+      and full of character.
+    </p>
+  </aside>
+
+  <footer>
+    <p>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
+  </footer>
+</body>
+</html>

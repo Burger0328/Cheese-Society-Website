@@ -1,0 +1,49 @@
+@layer layout {
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100svh;
+  }
+
+  body > header {
+    grid-area: header;
+  }
+
+  body > nav {
+    grid-area: nav;
+    border-block-end: var(--border);
+  }
+
+  body > main {
+    grid-area: main;
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: var(--space-3);
+  }
+
+  body > footer {
+    grid-area: footer;
+  }
+
+  .family-image {
+    display: block;
+    max-width: 18rem;
+    width: 100%;
+    height: auto;
+    margin-inline: auto;
+    margin-block-end: var(--space-3);
+  }
+
+  main p:last-child {
+    margin-block-start: var(--space-3);
+  }
+
+  main p:last-child a {
+    margin-inline-end: var(--space-2);
+  }
+}

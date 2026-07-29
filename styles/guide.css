@@ -1,0 +1,45 @@
+@layer layout {
+  body > main {
+    padding: var(--space-3);
+  }
+
+  article {
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: var(--space-2) var(--space-3);
+    border-inline-start: var(--rule);
+    background: var(--panel);
+  }
+
+  article > header {
+    margin-block-end: var(--space-3);
+  }
+
+  article section {
+    margin-block-start: var(--space-3);
+  }
+
+  article img {
+    display: block;
+    max-width: 12rem;
+    height: auto;
+    margin-block: var(--space-2);
+  }
+
+  blockquote {
+    margin-inline: 0;
+    padding: var(--space-2);
+    border-inline-start: var(--rule);
+    background: var(--paper);
+  }
+
+  fieldset {
+    margin-block-end: var(--space-2);
+    padding: var(--space-2);
+    border: var(--border);
+  }
+
+  input[type="text"] {
+    padding: var(--space-1);
+  }
+} 

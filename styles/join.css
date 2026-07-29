@@ -1,0 +1,62 @@
+@layer layout {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+  }
+
+  body > main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-3);
+  }
+
+  .membership-card {
+    width: 100%;
+    max-width: 32rem;
+    padding: var(--space-3);
+    border: var(--border);
+    border-block-start: var(--rule);
+    background: var(--panel);
+  }
+
+  form {
+    margin-block-start: var(--space-2);
+  }
+
+  fieldset {
+    margin-block-end: var(--space-2);
+    padding: var(--space-2);
+    border: var(--border);
+  }
+
+  label {
+    display: block;
+    margin-block-end: var(--space-1);
+  }
+
+  input,
+  select,
+  button {
+    font: inherit;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: var(--space-1);
+  }
+
+  dialog {
+    max-width: 30rem;
+    padding: var(--space-3);
+    border: var(--border);
+  }
+
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.4);
+  }
+}
