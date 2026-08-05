@@ -2,7 +2,7 @@
 
 A responsive, multi-page website for a fictional campus cheese society. The project demonstrates semantic HTML, modular CSS, accessible navigation and forms, native browser UI elements, and deployment as a static site.
 
-[View the live site](https://cse134b-hw4-zhibo.netlify.app/)
+[View the live site](https://cheese-society-website.netlify.app/)
 
 ![The CSE Cheese Society home page](docs/screenshots/home-page.png)
 
