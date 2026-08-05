@@ -1,15 +1,8 @@
 @layer layout {
   body {
-    --nav-width: 10rem;
-    --aside-width: 12rem;
-
     display: grid;
-    grid-template-areas:
-      "header header header"
-      "nav    main   aside"
-      "footer footer footer";
-    grid-template-columns: var(--nav-width) 1fr var(--aside-width);
-    grid-template-rows: auto 1fr auto;
+    grid-template:
+      "header header" auto "nav nav" auto "main aside" 1fr "footer footer" auto / minmax(0, 1fr) minmax(15rem, 22rem);
     min-height: 100svh;
   }
 
@@ -19,19 +12,35 @@
 
   body > nav {
     grid-area: nav;
-    border-inline-end: var(--border);
   }
 
   body > main {
     grid-area: main;
-    padding: var(--space-3);
+    max-width: 58rem;
+    padding: clamp(var(--space-3), 7vw, var(--space-5));
+  }
+
+  body > main > h2 {
+    max-width: 18ch;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  body > main > p {
+    max-width: var(--measure);
+    color: var(--muted-ink);
+    font-size: 1.1rem;
   }
 
   body > aside {
     grid-area: aside;
-    padding: var(--space-2);
-    border-inline-start: var(--border);
+    align-self: start;
+    margin: var(--space-3) var(--space-3) var(--space-3) 0;
+    padding: var(--space-3);
+    border: var(--border);
+    border-radius: var(--radius-l);
     background: var(--panel);
+    box-shadow: var(--shadow);
   }
 
   body > aside img {
@@ -43,22 +52,14 @@
     grid-area: footer;
   }
 
-  @media (max-width: 40rem) {
+  @media (width <= 45rem) {
     body {
-      grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr auto auto;
+      grid-template:
+        "header" auto "nav" auto "main" 1fr "aside" auto "footer" auto / 1fr;
     }
 
-    body > nav,
     body > aside {
-      border-inline: none;
-      border-block-end: var(--border);
+      margin: 0 var(--space-2) var(--space-3);
     }
   }
 }

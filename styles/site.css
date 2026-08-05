@@ -2,26 +2,50 @@
   body > header,
   body > nav,
   body > footer {
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-2) clamp(var(--space-2), 5vw, var(--space-4));
     background: var(--panel);
   }
 
   body > header {
-    border-block-end: var(--border);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: linear-gradient(135deg, var(--panel), #fff7df);
+  }
+
+  body > header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+  }
+
+  body > nav {
+    border-block: var(--border);
   }
 
   body > nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem var(--space-2);
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
+  body > nav a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
   body > footer {
     border-block-start: var(--border);
+    color: var(--muted-ink);
   }
 
   .site-logo {
-    width: 4rem;
+    width: clamp(3.25rem, 7vw, 5rem);
     height: auto;
   }
 }
@@ -30,6 +54,7 @@
   @view-transition {
     navigation: auto;
   }
+
   .fresh-transition {
     view-transition-name: fresh-cheese;
   }
