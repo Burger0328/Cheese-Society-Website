@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "A responsive multi-page website built with semantic HTML and modular CSS.",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "npm run test:html && npm run test:links && npm run test:css",
     "test:html": "html-validate \"**/*.html\"",
